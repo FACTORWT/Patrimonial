@@ -1,0 +1,65 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --no-color attach --machine --device-id=8b1bb800 lib\main.dart
+
+## exception
+
+StateError: Bad state: Future already completed
+
+```
+#0      _AsyncCompleter.complete (dart:async/future_impl.dart:35:31)
+#1      FlutterDevice.connect.<anonymous closure> (package:flutter_tools/src/resident_runner.dart:324:17)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.3.2, on Microsoft Windows [Version 10.0.19045.3693], locale en-IN)
+    • Flutter version 3.3.2 on channel stable at D:\Flutter SDK\flutter_windows_3.3.2-stable
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision e3c29ec00c (1 year, 3 months ago), 2022-09-14 08:46:55 -0500
+    • Engine revision a4ff2c53d8
+    • Dart version 2.18.1
+    • DevTools version 2.15.0
+
+[!] Android toolchain - develop for Android devices (Android SDK version 33.0.1)
+    • Android SDK at C:\Users\pc\AppData\Local\Android\sdk
+    • Platform android-34, build-tools 33.0.1
+    • Java binary at: C:\microsoft-jdk-11.0.18-windows-x64\jdk-11.0.18+10\bin\java
+    • Java version OpenJDK Runtime Environment Microsoft-7208460 (build 11.0.18+10-LTS)
+    ✗ Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/docs/get-started/install/windows#android-setup for more details.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✗] Visual Studio - develop for Windows
+    ✗ Visual Studio not installed; this is necessary for Windows development.
+      Download at https://visualstudio.microsoft.com/downloads/.
+      Please install the "Desktop development with C++" workload, including all of its default components
+
+[!] Android Studio (version 2022.1)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    ✗ Unable to find bundled Java version.
+    • Try updating or re-installing Android Studio.
+
+[✓] Connected device (4 available)
+    • vivo 1919 (mobile) • 8b1bb800 • android-arm64  • Android 12 (API 31)
+    • Windows (desktop)  • windows  • windows-x64    • Microsoft Windows [Version 10.0.19045.3693]
+    • Chrome (web)       • chrome   • web-javascript • Google Chrome 119.0.6045.200
+    • Edge (web)         • edge     • web-javascript • Microsoft Edge 119.0.2151.93
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+! Doctor found issues in 3 categories.
+```
